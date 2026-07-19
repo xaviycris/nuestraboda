@@ -346,6 +346,7 @@ body{
     align-items: center;
 }
 
+/* Columna izquierda - Foto en blanco y negro */
 .historia-image{
     position: relative;
     overflow: hidden;
@@ -358,11 +359,13 @@ body{
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: transform 1.2s ease;
+    filter: grayscale(100%) contrast(1.05);
+    transition: filter 1.2s ease, transform 1.5s ease;
 }
 
 .historia-image:hover img{
-    transform: scale(1.05);
+    filter: grayscale(0%) contrast(1);
+    transform: scale(1.03);
 }
 
 .historia-image-label{
@@ -379,6 +382,7 @@ body{
     font-weight: 700;
 }
 
+/* Columna derecha - Texto editorial */
 .historia-text{
     padding: 20px 0;
 }
@@ -441,7 +445,7 @@ body{
     line-height: 1;
 }
 
-/* Detalle numerico decorativo */
+/* Detalle numerico decorativo tipo capitulo */
 .historia-detail{
     position: absolute;
     top: 40px;
