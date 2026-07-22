@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ANTI-CACHE -->
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
+<title>Xavi & Cris · Nuestra Boda · Abril 2027</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Allura&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --bg: #F5EFE4;
+    --bg-alt: #EDE4D3;
+    --bg-warm: #EFE7D6;
+    --olive: #8A9070;
+    --olive-dark: #6E7458;
+    --sage: #B5B89A;
+    --sage-soft: #C7C9AF;
+    --terracota: #C68B5F;
+    --terracota-dark: #A67144;
+    --ocre: #D4A574;
+    --wood: #A67A4E;
+    --stone: #D9C9AE;
+    --text: #3D3428;
+    --text-soft: #6B5D4A;
+    --line: #C9BFA8;
+}
+
+*{ margin: 0; padding: 0; box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+body{
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Lato", sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* HERO */
+.hero{
+    min-height: 100vh;
+    position: relative;
+    background: var(--bg);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.hero-topbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    border-bottom: 1px solid var(--line);
+    font-family: "Lato", sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--text);
+    position: relative;
+    z-index: 10;
+}
+.hero-topbar-left{ color: var(--terracota); font-weight: 700; }
+.hero-topbar-center{
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    letter-spacing: 3px;
+    text-transform: none;
+    color: var(--olive-dark);
+}
+.hero-topbar-right{ color: var(--text); font-weight: 400; }
+.hero-content{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 25px;
+    position: relative;
+}
+.hero-illustration{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    width: 90%;
+    max-width: 800px;
+    opacity: 0.35;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+    z-index: 1;
+}
+.hero-illustration img{ width: 100%; height: auto; display: block; }
+.hero-inner{
+    text-align: center;
+    max-width: 900px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 2s ease;
+}
+.hero-eyebrow{
+    font-family: "Lato", sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: var(--terracota);
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+.hero-title{
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-size: 7.5rem;
+    line-height: 1;
+    letter-spacing: 4px;
+    color: var(--olive-dark);
+    margin-bottom: 10px;
+}
+.hero-title .amp{
+    font-family: "Allura", cursive;
+    font-weight: 400;
+    font-size: 8rem;
+    color: var(--terracota);
+    display: inline-block;
+    line-height: 0.5;
+    vertical-align: middle;
+    margin: 0 20px;
+    transform: translateY(-10px);
+    letter-spacing: normal;
+}
+.hero-subtitle{ margin-top: 30px; text-align: center; }
+.hero-subtitle-day{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: var(--terracota);
+    margin-bottom: 15px;
+}
+.hero-subtitle-date{
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-size: 2.2rem;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: var(--text);
+    line-height: 1;
+}
+.hero-quote{
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.4rem;
+    color: var(--text);
+    margin: 60px auto 0;
+    max-width: 550px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    position: relative;
+}
+.hero-quote::after{
+    content: "";
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: var(--terracota);
+    margin: 25px auto;
+}
+.hero-bottombar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px;
+    border-top: 1px solid var(--line);
+    font-family: "Lato", sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--text);
+    background: var(--bg);
+    position: relative;
+    z-index: 10;
+}
+.hero-bottombar-left{ display: flex; align-items: center; gap: 15px; }
+.hero-bottombar-left .dot{
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--terracota);
+    border-radius: 50%;
+}
+.hero-bottombar-center{
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    text-transform: none;
+    font-style: italic;
+    color: var(--olive-dark);
+}
+.hero-bottombar-right{ font-weight: 700; color: var(--terracota); }
+.hero-side-text-left,
+.hero-side-text-right{
+    position: absolute;
+    top: 50%;
+    font-family: "Lato", sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: var(--olive-dark);
+    white-space: nowrap;
+    z-index: 5;
+}
+.hero-side-text-left{
+    left: 20px;
+    transform: translateY(-50%) rotate(-90deg);
+    transform-origin: left center;
+}
+.hero-side-text-right{
+    right: 20px;
+    transform: translateY(-50%) rotate(90deg);
+    transform-origin: right center;
+}
+
+/* COUNTDOWN */
+.countdown{
+    padding: 140px 25px;
+    background: var(--bg);
+    border-top: 1px solid var(--line);
+    text-align: center;
+    position: relative;
+}
+.countdown-eyebrow{
+    font-family: "Lato", sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: var(--terracota);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+.countdown-title{
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 2rem;
+    color: var(--olive-dark);
+    margin-bottom: 70px;
+    letter-spacing: 2px;
+}
+.countdown-grid{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 0;
+    max-width: 900px;
+    margin: 0 auto;
+    flex-wrap: nowrap;
+}
+.countdown-item{
+    flex: 1;
+    padding: 0 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.countdown-item:not(:last-child)::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 15%;
+    height: 70%;
+    width: 1px;
+    background: var(--olive);
+    opacity: 0.4;
+}
+.countdown-number{
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-size: 5.5rem;
+    line-height: 1;
+    color: var(--text);
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+.countdown-label{
+    font-family: "Lato", sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--terracota);
+    font-weight: 700;
+}
+.countdown-footer{
+    margin-top: 70px;
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.3rem;
+    color: var(--text);
+    letter-spacing: 1px;
+    position: relative;
+}
+.countdown-footer::before{
+    content: "";
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: var(--terracota);
+    margin: 0 auto 25px;
+}
+
+/* AGENDA */
+.agenda{
+    padding: 140px 25px;
+    background: var(--bg);
+    border-top: 1px solid var(--line);
+    text-align: center;
+    position: relative;
+}
+.agenda-eyebrow{
+    font-family: "Lato", sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: var(--terracota);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+.agenda-title{
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-size: 4rem;
+    line-height: 1;
+    letter-spacing: 2px;
+    color: var(--olive-dark);
+    margin-bottom: 15px;
+}
+.agenda-subtitle{
+    font-family: "Allura", cursive;
+    font-size: 2.2rem;
+    color: var(--terracota);
+    margin-bottom: 25px;
+    line-height: 1;
+}
+.agenda-date{
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: var(--text);
+    letter-spacing: 3px;
+    margin-bottom: 90px;
+    text-transform: uppercase;
+}
+.agenda-date::after{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 1px;
+    background: var(--terracota);
+    margin: 25px auto 0;
+}
+.agenda-timeline{
+    max-width: 640px;
+    margin: 0 auto;
+    position: relative;
+}
+.agenda-timeline::before{
+    content: "";
+    position: absolute;
+    top: 40px;
+    bottom: 40px;
+    left: 50%;
+    width: 1px;
+    background: var(--olive-dark);
+    opacity: 0.4;
+    transform: translateX(-0.5px);
+    z-index: 1;
+}
+.agenda-item{
+    display: grid;
+    grid-template-columns: 1fr 60px 1fr;
+    align-items: center;
+    margin-bottom: 55px;
+    position: relative;
+    z-index: 2;
+}
+.agenda-item:last-child{ margin-bottom: 0; }
+.agenda-item-image{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+}
+.agenda-item-image img{
+    max-width: 130px;
+    max-height: 130px;
+    width: auto;
+    height: auto;
+    display: block;
+    transition: transform 0.8s ease;
+    mix-blend-mode: multiply;
+    filter: contrast(1.05) brightness(1.02);
+}
+.agenda-item:hover .agenda-item-image img{
+    transform: scale(1.08);
+}
+.agenda-item-number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.agenda-item-number span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 1px solid var(--olive-dark);
+    color: var(--olive-dark);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1;
+}
+.agenda-item-text{
+    padding-left: 20px;
+    text-align: left;
+}
+.agenda-item-time{
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-size: 1.7rem;
+    color: var(--text);
+    line-height: 1;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+.agenda-item-name{
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.25rem;
+    color: var(--olive-dark);
+    line-height: 1.3;
+}
+.agenda-item-place{
+    font-family: "Lato", sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--terracota);
+    font-weight: 400;
+    margin-top: 6px;
+}
+
+/* UBICACION */
+.ubicacion{
+    padding: 140px 25px;
+    background: var(--bg);
+    border-top: 1px solid var(--line);
+    text-align: center;
+    position: relative;
+}
+.ubicacion-eyebrow{
+    font-family: "Lato", sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: var(--terracota);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+.ubicacion-title{
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-size: 4rem;
+    line-height: 1;
+    letter-spacing: 2px;
+    color: var(--olive-dark);
+    margin-bottom: 15px;
+}
+.ubicacion-subtitle{
+    font-family: "Allura", cursive;
+    font-size: 2.2rem;
+    color: var(--terracota);
+    margin-bottom: 30px;
+    line-height: 1;
+}
+.ubicacion-description{
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.3rem;
+    color: var(--text);
+    max-width: 650px;
+    margin: 0 auto 70px;
+    letter-spacing: 0.5px;
+    line-height: 1.7;
+}
+.ubicacion-description::after{
+    content: "";
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: var(--terracota);
+    margin: 30px auto 0;
+}
+.ubicacion-map{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.ubicacion-map img{
+    width: 100%;
+    height: auto;
+    display: block;
+    mix-blend-mode: multiply;
+    filter: contrast(1.05);
+}
+.ubicacion-buttons{
+    margin-top: 60px;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.ubicacion-btn{
+    display: inline-block;
+    padding: 15px 35px;
+    background: transparent;
+    border: 1px solid var(--olive-dark);
+    color: var(--olive-dark);
+    font-family: "Lato", sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+.ubicacion-btn:hover{
+    background: var(--olive-dark);
+    color: var(--bg);
+}
+.ubicacion-btn.terracota{
+    border-color: var(--terracota);
+    color: var(--terracota);
+}
+.ubicacion-btn.terracota:hover{
+    background: var(--terracota);
+    color: var(--bg);
+}
+
+@keyframes fadeIn{
+    from{ opacity: 0; transform: translateY(30px); }
+    to{ opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 900px){
+    .hero-topbar, .hero-bottombar{
+        padding: 20px 25px;
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+    .hero-topbar-center, .hero-bottombar-center{ font-size: 0.9rem; }
+    .hero-title{ font-size: 3.8rem; letter-spacing: 3px; }
+    .hero-title .amp{ font-size: 4.5rem; margin: 0 12px; }
+    .hero-subtitle-day{ font-size: 0.7rem; letter-spacing: 5px; }
+    .hero-subtitle-date{ font-size: 1.5rem; letter-spacing: 4px; }
+    .hero-quote{ font-size: 1.1rem; padding: 0 20px; }
+    .hero-side-text-left, .hero-side-text-right{ display: none; }
+    .hero-illustration{ width: 130%; opacity: 0.25; }
+    .countdown{ padding: 90px 20px; }
+    .countdown-title{ font-size: 1.4rem; margin-bottom: 50px; }
+    .countdown-grid{ flex-wrap: wrap; gap: 30px 0; }
+    .countdown-item{ flex: 0 0 50%; padding: 20px 10px; }
+    .countdown-item:not(:last-child)::after{ display: none; }
+    .countdown-item:nth-child(odd)::after{
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 20%;
+        height: 60%;
+        width: 1px;
+        background: var(--olive);
+        opacity: 0.4;
+        display: block;
+    }
+    .countdown-number{ font-size: 3.5rem; }
+    .countdown-label{ font-size: 0.65rem; letter-spacing: 4px; }
+    .countdown-footer{ font-size: 1.1rem; margin-top: 50px; }
+    .agenda{ padding: 90px 20px; }
+    .agenda-title{ font-size: 2.6rem; }
+    .agenda-subtitle{ font-size: 1.8rem; }
+    .agenda-date{ font-size: 1rem; letter-spacing: 2px; margin-bottom: 60px; }
+    .agenda-item{ grid-template-columns: 1fr 50px 1fr; margin-bottom: 40px; }
+    .agenda-item-image img{ max-width: 90px; max-height: 90px; }
+    .agenda-item-image{ padding-right: 12px; }
+    .agenda-item-number span{ width: 30px; height: 30px; font-size: 0.85rem; }
+    .agenda-item-text{ padding-left: 12px; }
+    .agenda-item-time{ font-size: 1.3rem; }
+    .agenda-item-name{ font-size: 1rem; }
+    .agenda-item-place{ font-size: 0.6rem; letter-spacing: 2px; }
+    .ubicacion{ padding: 90px 20px; }
+    .ubicacion-title{ font-size: 2.6rem; }
+    .ubicacion-subtitle{ font-size: 1.8rem; }
+    .ubicacion-description{ font-size: 1.1rem; }
+    .ubicacion-buttons{ flex-direction: column; align-items: center; gap: 15px; }
+    .ubicacion-btn{ width: 90%; max-width: 320px; text-align: center; }
+}
+
+@media (max-width: 500px){
+    .hero-title{ font-size: 3rem; }
+    .hero-title .amp{ font-size: 3.8rem; }
+    .hero-eyebrow{ font-size: 0.7rem; letter-spacing: 5px; }
+    .countdown-number{ font-size: 2.8rem; }
+    .agenda-item-image img{ max-width: 75px; max-height: 75px; }
+    .agenda-item-time{ font-size: 1.15rem; }
+    .agenda-item-name{ font-size: 0.9rem; }
+}
+
+</style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="hero-topbar">
+            <div class="hero-topbar-left"></div>
+            <div class="hero-topbar-center"></div>
+            <div class="hero-topbar-right">Valencia</div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-side-text-left">Una historia de amor</div>
+            <div class="hero-side-text-right">Xavi &amp; Cris · 2027</div>
+            <div class="hero-illustration">
+                <img src="img/finca.png" alt="">
+            </div>
+            <div class="hero-inner">
+                <p class="hero-eyebrow">· Nuestra Boda ·</p>
+                <h1 class="hero-title">
+                    XAVI<span class="amp">&amp;</span>CRIS
+                </h1>
+                <div class="hero-subtitle">
+                    <p class="hero-subtitle-day">· Sábado ·</p>
+                    <p class="hero-subtitle-date">3 · Abril · 2027</p>
+                </div>
+                <p class="hero-quote">
+                    Que el corazón no se pase de moda
+                </p>
+            </div>
+        </div>
+        <div class="hero-bottombar">
+            <div class="hero-bottombar-left">
+                <span class="dot"></span>
+                <span>Guarda nuestro día</span>
+            </div>
+            <div class="hero-bottombar-center">Desliza para descubrir</div>
+            <div class="hero-bottombar-right">03 · 04 · 27</div>
+        </div>
+    </section>
+
+    <section class="countdown">
+        <p class="countdown-eyebrow">· Contando los días ·</p>
+        <h2 class="countdown-title">
+            El tiempo pasa despacio cuando algo bonito se acerca
+        </h2>
+        <div class="countdown-grid">
+            <div class="countdown-item">
+                <div class="countdown-number" id="days">000</div>
+                <div class="countdown-label">Días</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="hours">00</div>
+                <div class="countdown-label">Horas</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="minutes">00</div>
+                <div class="countdown-label">Minutos</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="seconds">00</div>
+                <div class="countdown-label">Segundos</div>
+            </div>
+        </div>
+        <p class="countdown-footer">hasta el gran día</p>
+    </section>
+
+    <section class="agenda">
+        <p class="agenda-eyebrow">· El gran día ·</p>
+        <h2 class="agenda-title">La agenda</h2>
+        <p class="agenda-subtitle">un día para recordar</p>
+        <p class="agenda-date">Sábado · 3 · Abril · 2027</p>
+        <div class="agenda-timeline">
+
+            <div class="agenda-item">
+                <div class="agenda-item-image">
+                    <img src="img/ceremonia.png" alt="Ceremonia">
+                </div>
+                <div class="agenda-item-number"><span>1</span></div>
+                <div class="agenda-item-text">
+                    <p class="agenda-item-time">12:30</p>
+                    <p class="agenda-item-name">Ceremonia</p>
+                    <p class="agenda-item-place">Centro Arrupe · Valencia</p>
+                </div>
+            </div>
+
+            <div class="agenda-item">
+                <div class="agenda-item-image">
+                    <img src="img/masia-exterior.png" alt="Cocktail">
+                </div>
+                <div class="agenda-item-number"><span>2</span></div>
+                <div class="agenda-item-text">
+                    <p class="agenda-item-time">14:00</p>
+                    <p class="agenda-item-name">Cocktail de bienvenida</p>
+                    <p class="agenda-item-place">El Pueblo by Bonho</p>
+                </div>
+            </div>
+
+            <div class="agenda-item">
+                <div class="agenda-item-image">
+                    <img src="img/masia-interior.png" alt="Banquete">
+                </div>
+                <div class="agenda-item-number"><span>3</span></div>
+                <div class="agenda-item-text">
+                    <p class="agenda-item-time">15:30</p>
+                    <p class="agenda-item-name">Banquete</p>
+                    <p class="agenda-item-place">El Pueblo by Bonho</p>
+                </div>
+            </div>
+
+            <div class="agenda-item">
+                <div class="agenda-item-image">
+                    <img src="img/baile.png" alt="Baile">
+                </div>
+                <div class="agenda-item-number"><span>4</span></div>
+                <div class="agenda-item-text">
+                    <p class="agenda-item-time">21:00</p>
+                    <p class="agenda-item-name">El primer baile</p>
+                    <p class="agenda-item-place">El Pueblo by Bonho</p>
+                </div>
+            </div>
+
+            <div class="agenda-item">
+                <div class="agenda-item-image">
+                    <img src="img/fiesta.png" alt="Fiesta">
+                </div>
+                <div class="agenda-item-number"><span>5</span></div>
+                <div class="agenda-item-text">
+                    <p class="agenda-item-time">22:00</p>
+                    <p class="agenda-item-name">Fiesta</p>
+                    <p class="agenda-item-place">El Pueblo by Bonho</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="ubicacion">
+        <p class="ubicacion-eyebrow">· Dónde estamos ·</p>
+        <h2 class="ubicacion-title">La Sierra Calderona</h2>
+        <p class="ubicacion-subtitle">un rincón mediterráneo</p>
+        <p class="ubicacion-description">
+            El Pueblo by Bonho se encuentra en el corazón de la Sierra Calderona,
+            rodeado de olivos, cipreses y naranjos. Un paisaje tranquilo entre
+            los pueblos de Marines, Serra, Olocau y Nàquera, a solo 30 minutos de Valencia.
+        </p>
+        <div class="ubicacion-map">
+            <img src="img/mapa.png" alt="Mapa de la zona - Sierra Calderona">
+        </div>
+        <div class="ubicacion-buttons">
+            <a class="ubicacion-btn" href="https://www.google.com/maps/search/?api=1&query=Centro+Arrupe+Jesuitas+Valencia" target="_blank">
+                Cómo llegar a la Ceremonia
+            </a>
+            <a class="ubicacion-btn terracota" href="https://www.google.com/maps/search/?api=1&query=El+Pueblo+by+Bonho+Marines+Valencia" target="_blank">
+                Cómo llegar al Banquete
+            </a>
+        </div>
+    </section>
+
+<script>
+const bodaFecha = new Date("2027-04-03T12:30:00").getTime();
+
+function actualizarCuentaAtras(){
+    const ahora = new Date().getTime();
+    const distancia = bodaFecha - ahora;
+    if(distancia < 0){
+        document.getElementById("days").innerHTML = "0";
+        document.getElementById("hours").innerHTML = "00";
+        document.getElementById("minutes").innerHTML = "00";
+        document.getElementById("seconds").innerHTML = "00";
+        return;
+    }
+    const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+    const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+    document.getElementById("days").innerHTML = dias;
+    document.getElementById("hours").innerHTML = horas.toString().padStart(2, "0");
+    document.getElementById("minutes").innerHTML = minutos.toString().padStart(2, "0");
+    document.getElementById("seconds").innerHTML = segundos.toString().padStart(2, "0");
+}
+actualizarCuentaAtras();
+setInterval(actualizarCuentaAtras, 1000);
+</script>
+
+</body>
+</html>
