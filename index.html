@@ -49,7 +49,7 @@ body{
 .hero{
     min-height: 100vh;
     position: relative;
-    background: var(--bg);
+    background: #FFFFFF;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -137,6 +137,17 @@ body{
     transform: translateY(-10px);
     letter-spacing: normal;
 }
+.hero-drawing{
+    margin: 40px auto 35px;
+    max-width: 400px;
+    width: 100%;
+}
+.hero-drawing img{
+    width: 100%;
+    height: auto;
+    display: block;
+    mix-blend-mode: multiply;
+}
 .hero-subtitle{ margin-top: 30px; text-align: center; }
 .hero-subtitle-day{
     font-family: "Lato", sans-serif;
@@ -187,7 +198,7 @@ body{
     letter-spacing: 4px;
     text-transform: uppercase;
     color: var(--text);
-    background: var(--bg);
+    background: #FFFFFF;
     position: relative;
     z-index: 10;
 }
@@ -657,6 +668,9 @@ body{
                 <h1 class="hero-title">
                     XAVI<span class="amp">&amp;</span>CRIS
                 </h1>
+                                <div class="hero-drawing">
+                    <img src="img/finca.png" alt="Ilustración de la finca">
+                </div>
                 <div class="hero-subtitle">
                     <p class="hero-subtitle-day">· Sábado ·</p>
                     <p class="hero-subtitle-date">3 · Abril · 2027</p>
