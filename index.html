@@ -577,7 +577,83 @@ body{
     background: var(--terracota);
     color: var(--bg);
 }
-
+/* RSVP */
+.rsvp{
+    padding: 140px 25px;
+    background: rgba(138, 144, 112, 0.12);
+    border-top: 1px solid var(--line);
+    text-align: center;
+    position: relative;
+}
+.rsvp-eyebrow{
+    font-family: "Lato", sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: var(--terracota);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+.rsvp-title{
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-size: 4rem;
+    line-height: 1;
+    letter-spacing: 2px;
+    color: var(--olive-dark);
+    margin-bottom: 15px;
+}
+.rsvp-subtitle{
+    font-family: "Allura", cursive;
+    font-size: 2.2rem;
+    color: var(--terracota);
+    margin-bottom: 40px;
+    line-height: 1;
+}
+.rsvp-text{
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.3rem;
+    color: var(--text);
+    max-width: 600px;
+    margin: 0 auto 20px;
+    line-height: 1.7;
+}
+.rsvp-date{
+    font-family: "Lato", sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--terracota);
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+.rsvp-btn{
+    display: inline-block;
+    padding: 18px 55px;
+    background: var(--olive-dark);
+    border: 1px solid var(--olive-dark);
+    color: #FFFFFF;
+    font-family: "Lato", sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.4s ease;
+}
+.rsvp-btn:hover{
+    background: transparent;
+    color: var(--olive-dark);
+}
+@media (max-width: 900px){
+    .rsvp{ padding: 90px 20px; }
+    .rsvp-title{ font-size: 2.6rem; }
+    .rsvp-subtitle{ font-size: 1.8rem; }
+    .rsvp-text{ font-size: 1.1rem; }
+    .rsvp-btn{ width: 90%; max-width: 320px; padding: 18px 20px; }
+}
 @keyframes fadeIn{
     from{ opacity: 0; transform: translateY(30px); }
     to{ opacity: 1; transform: translateY(0); }
@@ -777,7 +853,21 @@ body{
 
         </div>
     </section>
-
+    <section class="rsvp">
+        <p class="rsvp-eyebrow">· Te esperamos ·</p>
+        <h2 class="rsvp-title">Confirma tu asistencia</h2>
+        <p class="rsvp-subtitle">nos hará mucha ilusión</p>
+        <p class="rsvp-text">
+            Rellena el formulario y cuéntanos si nos acompañarás
+            en nuestro gran día. Lo único que os pedimos es que
+            vengáis con ganas de celebrar, bailar y crear recuerdos
+            con nosotros.
+        </p>
+        <p class="rsvp-date">Antes del 1 de marzo de 2027</p>
+        <a class="rsvp-btn" href="https://forms.gle/61KCF2WX6zs4LEhKA" target="_blank" rel="noopener">
+            Confirmar asistencia
+        </a>
+    </section>
     <section class="ubicacion">
         <p class="ubicacion-eyebrow">· Dónde estamos ·</p>
         <h2 class="ubicacion-title">La Sierra Calderona</h2>
